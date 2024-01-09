@@ -1,11 +1,11 @@
 include|BASE_PART
 add_column|percentageF|byte
 add_column|AdjustableDownforce|byte
-add_column|Unknown|ushort
+add_column|performanceFMaybe|ushort
 add_column|length|ushort
 add_column|height|ushort
 add_column|wheelbase|ushort
 add_column|mass|ushort
-add_column|Unknown2|byte
-add_column|Unknown3|byte
-add_column|Unknown4|ushort
+add_column|yawMaybe|byte
+add_column|cheightMaybe|byte
+add_column|performanceRMaybe|ushort

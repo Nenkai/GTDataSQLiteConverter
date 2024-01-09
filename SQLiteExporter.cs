@@ -223,6 +223,7 @@ namespace GTDataSQLiteConverter
                             DBColumnType.Short => $"{(ushort)row.Cells[i]}, ",
                             DBColumnType.Byte => $"{(byte)row.Cells[i]}, ",
                             DBColumnType.Double => $"{(double)row.Cells[i]}, ",
+                            _ => throw new InvalidDataException($"Unexpected type '{column.Type}' for column {column.Name} in table {name}")
                         };
                     }
 

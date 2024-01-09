@@ -7,9 +7,14 @@ add_column|Label|string
 add_column|Year|ushort
 add_column|Price|uint
 
-// bit0 = cannotBuy
-// bit1 = cannotSell
-// bit2 = cannotChangeWheel
+// bit0 = no restrictions
+// bit1 = cannotBuy // can be traded, despite price appearing "----"
+// bit2 = cannotSell // cannot be traded, despite price appearing properly
+// bit3 = cannotChangeWheel // cannot be sold, cannot be bought, cannot be traded
+// bit4 = cannotChangeWheel // no other restrictions
+// bit5 = cannotChangeWheel // cannot be bought, can be traded, price appears "----"
+// bit6 = cannotChangeWheel // cannot be sold, cannot be bought, cannot be traded despite price appearing
+// bit7 = cannotChangeWheel // cannot be sold, cannot be bought, cannot be traded, price appears "----"
 add_column|Flags|byte
 add_column|Unknown|byte
 add_column|NameFirstPartJP|unicode
