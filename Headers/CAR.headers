@@ -16,7 +16,11 @@ add_column|Price|uint
 // bit6 = cannotChangeWheel // cannot be sold, cannot be bought, cannot be traded despite price appearing
 // bit7 = cannotChangeWheel // cannot be sold, cannot be bought, cannot be traded, price appears "----"
 add_column|Flags|byte
-add_column|Unknown|byte
+
+// 0 = Road car
+// 1 = Race car
+// 2 = Rally car
+add_column|CarType|byte
 add_column|NameFirstPartJP|unicode
 add_column|NameSecondPartJP|unicode
 add_column|SteerType|byte
