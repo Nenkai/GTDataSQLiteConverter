@@ -6,7 +6,7 @@ namespace GTDataSQLiteConverter
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("[-- GT3DataSQLiteConverter by ddm, based on GT3DataSplitter by pez2k -- ]");
+            Console.WriteLine("[-- GT3DataSQLiteConverter 1.0.2 by ddm, Nenkai, based on GT3DataSplitter by pez2k -- ]");
 
             Parser.Default.ParseArguments<ExportVerbs, ImportVerbs>(args)
                 .WithParsed<ExportVerbs>(Export)
