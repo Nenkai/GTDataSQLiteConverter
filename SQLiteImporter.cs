@@ -118,6 +118,12 @@ namespace GTDataSQLiteConverter
                                     row.Cells.Add(id);
                                 }
                                 break;
+                            case DBColumnType.Float:
+                                {
+                                    float f = reader.GetFloat(i);
+                                    row.Cells.Add(f);
+                                }
+                                break;
                             case DBColumnType.Int:
                                 {
                                     int value = (int)reader.GetInt64(i);
@@ -177,6 +183,9 @@ namespace GTDataSQLiteConverter
                             case DBColumnType.Unicode:
                             case DBColumnType.String:
                                 sw.WriteUInt16((ushort)row.Cells[j]);
+                                break;
+                            case DBColumnType.Float:
+                                sw.WriteSingle((float)row.Cells[j]);
                                 break;
                             case DBColumnType.Int:
                                 sw.WriteInt32((int)row.Cells[j]);
